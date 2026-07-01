@@ -1,208 +1,243 @@
-/* =========================
-   AI Team
-========================= */
-
 .ai-team-section {
-  padding: 120px 0;
-  background: #f8fafc;
+  position: relative;
+  background:
+    radial-gradient(circle at top left, rgba(73, 112, 255, 0.12), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(123, 92, 255, 0.14), transparent 34%),
+    #f7f9ff;
 }
 
-/* =========================
-   Grid
-========================= */
-
-.ai-grid {
+.ai-team-board {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 22px;
+  margin-top: 46px;
 }
 
-/* =========================
-   Card
-========================= */
-
-.ai-card {
-  display: flex;
-  flex-direction: column;
-
-  padding: 30px;
-
-  border: 1px solid #e8ecf2;
-  border-radius: 24px;
-
-  background: #ffffff;
-
-  transition: all 0.3s ease;
-
-  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.05);
+.ai-member-card {
+  position: relative;
+  min-height: 360px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(27, 45, 90, 0.08);
+  box-shadow: 0 22px 50px rgba(18, 35, 80, 0.08);
+  backdrop-filter: blur(14px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.ai-card:hover {
+.ai-member-card:hover {
   transform: translateY(-6px);
-
-  box-shadow: 0 24px 48px rgba(16, 24, 40, 0.10);
+  box-shadow: 0 28px 70px rgba(18, 35, 80, 0.13);
 }
 
-/* =========================
-   Icon
-========================= */
+.ai-member-main {
+  grid-row: span 2;
+  min-height: 100%;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(239, 244, 255, 0.92)),
+    radial-gradient(circle at top right, rgba(81, 109, 255, 0.18), transparent 40%);
+  border: 1px solid rgba(62, 91, 255, 0.16);
+}
 
-.ai-icon {
-  width: 60px;
-  height: 60px;
+.ai-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
 
+.ai-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 18px;
-
-  background: #eef4ff;
-  color: #5b4bff;
-
-  font-size: 1.1rem;
-  font-weight: 900;
-
-  margin-bottom: 24px;
+  background: linear-gradient(135deg, #edf3ff, #ffffff);
+  border: 1px solid rgba(39, 72, 150, 0.1);
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(39, 72, 150, 0.12);
 }
 
-/* =========================
-   Text
-========================= */
+.ai-member-main .ai-avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 30px;
+}
+
+.ai-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ai-avatar span {
+  font-size: 24px;
+  font-weight: 900;
+  color: #2850d8;
+}
+
+.ai-status-box {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(245, 248, 255, 0.9);
+  border: 1px solid rgba(45, 75, 140, 0.08);
+}
+
+.ai-status-box strong {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #1d2b55;
+}
+
+.ai-status-box small {
+  font-size: 12px;
+  color: #6b7390;
+}
+
+.ai-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7f8aa3;
+}
+
+.ai-status-online {
+  background: #2fd37a;
+  box-shadow: 0 0 0 5px rgba(47, 211, 122, 0.14);
+}
+
+.ai-status-building {
+  background: #ff9f2f;
+  box-shadow: 0 0 0 5px rgba(255, 159, 47, 0.14);
+}
+
+.ai-status-planning {
+  background: #7c5cff;
+  box-shadow: 0 0 0 5px rgba(124, 92, 255, 0.14);
+}
+
+.ai-status-ready {
+  background: #37c8c3;
+  box-shadow: 0 0 0 5px rgba(55, 200, 195, 0.14);
+}
+
+.ai-member-info {
+  margin-top: 28px;
+}
 
 .ai-role {
-  display: inline-block;
-
+  display: inline-flex;
   margin-bottom: 10px;
-
-  color: #667085;
-
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.ai-card h3 {
-  margin: 0 0 12px;
-
-  font-size: 1.4rem;
+  font-size: 13px;
   font-weight: 800;
-
-  color: #101828;
-
-  line-height: 1.3;
+  color: #4264e8;
 }
 
-.ai-status {
-  display: inline-block;
-
-  margin-bottom: 20px;
-
-  color: #2457ff;
-
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-.ai-description {
+.ai-member-info h3 {
   margin: 0;
-
-  color: #667085;
-
-  font-size: 0.95rem;
-
-  line-height: 1.8;
+  font-size: 24px;
+  color: #111a33;
+  letter-spacing: -0.04em;
 }
 
-/* =========================
-   Skills
-========================= */
+.ai-member-main .ai-member-info h3 {
+  font-size: 34px;
+}
+
+.ai-member-info p {
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #5d667d;
+}
+
+.ai-work-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(242, 246, 255, 0.85);
+  border: 1px solid rgba(42, 70, 140, 0.07);
+}
+
+.ai-work-panel div {
+  display: grid;
+  gap: 4px;
+}
+
+.ai-work-panel span {
+  font-size: 12px;
+  color: #7a8398;
+}
+
+.ai-work-panel strong {
+  font-size: 14px;
+  color: #172344;
+  line-height: 1.45;
+}
 
 .ai-skills {
   display: flex;
   flex-wrap: wrap;
-
   gap: 8px;
-
-  margin: 24px 0;
+  margin-top: 22px;
 }
 
 .ai-skills span {
-  padding: 8px 12px;
-
+  padding: 8px 11px;
   border-radius: 999px;
-
-  background: #f5f7fa;
-
-  color: #475467;
-
-  font-size: 0.8rem;
+  background: #ffffff;
+  border: 1px solid rgba(41, 73, 150, 0.08);
+  font-size: 12px;
   font-weight: 700;
+  color: #40506f;
 }
-
-/* =========================
-   Button
-========================= */
-
-.ai-button {
-  width: 100%;
-
-  height: 46px;
-
-  margin-top: auto;
-
-  border: none;
-
-  border-radius: 14px;
-
-  background: #101828;
-  color: #ffffff;
-
-  font-size: 0.9rem;
-  font-weight: 800;
-
-  cursor: pointer;
-
-  transition: all 0.25s ease;
-}
-
-.ai-button:hover {
-  background: #5b4bff;
-
-  transform: translateY(-1px);
-}
-
-/* =========================
-   Responsive
-========================= */
 
 @media (max-width: 1100px) {
-
-  .ai-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .ai-team-board {
+    grid-template-columns: 1fr 1fr;
   }
 
+  .ai-member-main {
+    grid-column: span 2;
+  }
 }
 
-@media (max-width: 768px) {
-
-  .ai-team-section {
-    padding: 90px 0;
-  }
-
-  .ai-grid {
+@media (max-width: 720px) {
+  .ai-team-board {
     grid-template-columns: 1fr;
   }
 
-  .ai-card {
-    padding: 26px;
+  .ai-member-main {
+    grid-column: span 1;
   }
 
-  .ai-card h3 {
-    font-size: 1.25rem;
+  .ai-member-card {
+    min-height: auto;
+    padding: 24px;
   }
 
-  .ai-description {
-    font-size: 0.92rem;
+  .ai-member-main .ai-avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 24px;
   }
 
+  .ai-member-main .ai-member-info h3 {
+    font-size: 28px;
+  }
+
+  .ai-card-top {
+    align-items: flex-start;
+  }
+
+  .ai-status-box {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
 }
