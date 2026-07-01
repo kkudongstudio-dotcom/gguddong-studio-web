@@ -1,76 +1,89 @@
-const divisions = [
-  {
-    color: "purple",
-    label: "운영중",
-    title: "AI 로또 분석공방",
-    subTitle: "LOTTO WORKSHOP",
-    description: "AI 기반 번호 분석, 추천 엔진, 결과 기록을 운영하는 로또 분석 플랫폼입니다.",
-    items: ["번호 분석", "추천 엔진", "AI 브리핑"],
-    button: "입장하기",
-  },
-  {
-    color: "orange",
-    label: "개발중",
-    title: "물류 사업부",
-    subTitle: "LOGISTICS DIVISION",
-    description: "현장 업무와 데이터를 연결하는 물류 자동화 및 ERP 기반 운영 시스템입니다.",
-    items: ["물류 ERP", "검수 자동화", "운영 대시보드"],
-    button: "준비중",
-  },
-  {
-    color: "mint",
-    label: "기획중",
-    title: "게임 스튜디오",
-    subTitle: "GAME STUDIO",
-    description: "AI와 함께 만드는 힐링 중심의 게임 프로젝트를 준비하고 있습니다.",
-    items: ["세계관", "캐릭터", "힐링 게임"],
-    button: "준비중",
-  },
-  {
-    color: "green",
-    label: "준비중",
-    title: "커머스 사업부",
-    subTitle: "COMMERCE DIVISION",
-    description: "브랜드와 상품, 콘텐츠를 연결하는 커머스 플랫폼을 준비하고 있습니다.",
-    items: ["브랜드", "상품", "콘텐츠"],
-    button: "준비중",
-  },
-];
-
 function BusinessDivisions() {
+  const divisions = [
+    {
+      title: "AI 로또 분석공방",
+      label: "LOTTO WORKSHOP",
+      status: "운영중",
+      color: "purple",
+      description:
+        "AI 추천 엔진과 브리핑을 기반으로 운영되는 첫 번째 공개 서비스입니다.",
+      linkText: "서비스 보기",
+      href: "https://ai-lottogongbang.kr",
+      isExternal: true,
+    },
+    {
+      title: "물류 사업부",
+      label: "LOGISTICS DIVISION",
+      status: "준비중",
+      color: "orange",
+      description:
+        "물류 검수, 입고, 반출, 수량 비교 자동화를 위한 운영 시스템입니다.",
+      linkText: "준비중",
+      href: "#business",
+      isExternal: false,
+    },
+    {
+      title: "게임 스튜디오",
+      label: "GAME STUDIO",
+      status: "기획중",
+      color: "mint",
+      description:
+        "청룡 꾸똥이 세계관과 캐릭터를 기반으로 확장될 게임 프로젝트입니다.",
+      linkText: "기획중",
+      href: "#business",
+      isExternal: false,
+    },
+    {
+      title: "커머스 사업부",
+      label: "COMMERCE DIVISION",
+      status: "준비중",
+      color: "green",
+      description:
+        "브랜드 콘텐츠와 상품 운영을 연결하는 커머스 프로젝트입니다.",
+      linkText: "준비중",
+      href: "#business",
+      isExternal: false,
+    },
+  ];
+
   return (
-   <section id="business" className="section divisions-section">
+    <section id="business" className="section business-section">
       <div className="container">
         <div className="section-heading">
-          <span>사업부</span>
-          <h2>GGUDDONG.STUDIO의 프로젝트 사업부</h2>
+          <span className="section-label">Business Divisions</span>
+
+          <h2>GGUDDONG.STUDIO의 사업부</h2>
+
           <p>
-  아이디어를 실제 서비스로 만들고,
-  운영 가능한 프로젝트로 성장시킵니다.
-</p>
+            각 사업부는 독립된 프로젝트처럼 움직이고,
+            내부 ERP와 AI 운영 시스템을 통해 점진적으로 연결됩니다.
+          </p>
         </div>
 
-        <div className="division-grid">
-          {divisions.map((item) => (
-            <article className={`division-card ${item.color}`} key={item.title}>
-              <div className="division-top">
-                <span className="division-label">{item.label}</span>
-                <span className="division-dot"></span>
+        <div className="business-grid">
+          {divisions.map((division) => (
+            <article
+              className={`business-card business-${division.color}`}
+              key={division.label}
+            >
+              <div className="business-card-top">
+                <span className="business-label">{division.label}</span>
+                <span className="business-status">{division.status}</span>
               </div>
 
-              <div>
-                <strong>{item.subTitle}</strong>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
+              <h3>{division.title}</h3>
 
-              <ul className="division-items">
-                {item.items.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
+              <p>{division.description}</p>
 
-              <button className="division-btn">{item.button}</button>
+              <a
+                href={division.href}
+                className="business-link"
+                target={division.isExternal ? "_blank" : undefined}
+                rel={division.isExternal ? "noreferrer" : undefined}
+              >
+                {division.linkText}
+                <span>→</span>
+              </a>
             </article>
           ))}
         </div>
