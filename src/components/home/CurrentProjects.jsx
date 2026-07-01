@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 function CurrentProjects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
     {
       title: "AI 로또 분석공방",
@@ -10,6 +14,9 @@ function CurrentProjects() {
       updated: "2026.06.29",
       lastUpdate: "추천엔진 개선 완료",
       keywords: ["AI 번호분석", "추천엔진", "AI 브리핑", "결과기록"],
+      href: "https://ai-lottogongbang.kr",
+      ready: true,
+      buttonText: "서비스 바로가기",
     },
     {
       title: "물류 ERP",
@@ -21,6 +28,9 @@ function CurrentProjects() {
       updated: "2026.06.29",
       lastUpdate: "검수 자동화 구조 설계 중",
       keywords: ["검수", "자동화", "대시보드"],
+      href: null,
+      ready: false,
+      buttonText: "준비중",
     },
     {
       title: "GAME STUDIO",
@@ -32,6 +42,9 @@ function CurrentProjects() {
       updated: "2026.06.29",
       lastUpdate: "세계관 및 캐릭터 방향 기획 중",
       keywords: ["세계관", "캐릭터", "힐링 게임"],
+      href: null,
+      ready: false,
+      buttonText: "기획중",
     },
     {
       title: "COMMERCE",
@@ -43,18 +56,20 @@ function CurrentProjects() {
       updated: "2026.06.29",
       lastUpdate: "브랜드 상품 및 콘텐츠 구조 준비 중",
       keywords: ["브랜드", "상품", "콘텐츠"],
+      href: null,
+      ready: false,
+      buttonText: "준비중",
     },
   ];
 
   return (
-    <section
-  id="projects"
-  className="section current-projects-section"
->
+    <section id="projects" className="section current-projects-section">
       <div className="container">
         <div className="section-heading">
           <span className="section-label">Current Projects</span>
+
           <h2>현재 운영 현황</h2>
+
           <p>
             GGUDDONG.STUDIO는 아이디어를 실제 서비스로 만들기 위해
             여러 프로젝트를 단계별로 구축하고 운영하고 있습니다.
@@ -108,10 +123,62 @@ function CurrentProjects() {
                   <span key={keyword}>{keyword}</span>
                 ))}
               </div>
+
+              {project.ready ? (
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-action"
+                >
+                  {project.buttonText}
+                  <span>→</span>
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  className="project-action"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  {project.buttonText}
+                  <span>→</span>
+                </button>
+              )}
             </article>
           ))}
         </div>
       </div>
+
+      {selectedProject && (
+        <div className="login-notice">
+          <div className="login-notice-card">
+            <button
+              type="button"
+              className="login-notice-close"
+              onClick={() => setSelectedProject(null)}
+              aria-label="Close notice"
+            >
+              ×
+            </button>
+
+            <h3>{selectedProject.title}</h3>
+
+            <p>
+              현재 {selectedProject.status} 단계의 프로젝트입니다.
+              <br />
+              추후 서비스 연결이 준비되면 공식 홈페이지에서 안내됩니다.
+            </p>
+
+            <button
+              type="button"
+              className="login-notice-confirm"
+              onClick={() => setSelectedProject(null)}
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

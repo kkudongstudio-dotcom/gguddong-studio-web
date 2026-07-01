@@ -136,3 +136,112 @@
     right: 24px;
   }
 }
+.business-link {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.business-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(8, 13, 32, 0.55);
+  backdrop-filter: blur(8px);
+}
+
+.business-modal-card {
+  position: relative;
+  width: min(520px, 100%);
+  padding: 34px;
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: 0 30px 90px rgba(10, 20, 50, 0.28);
+}
+
+.business-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  color: #7a8398;
+  cursor: pointer;
+}
+
+.business-modal-label {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: #f1f5ff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #2850d8;
+}
+
+.business-modal-card h3 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+  color: #111a33;
+}
+
+.business-modal-card p {
+  margin: 16px 0 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #5e687f;
+}
+
+.business-modal-status {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 24px 0;
+  padding: 16px;
+  border-radius: 18px;
+  background: #f5f8ff;
+}
+
+.business-modal-status strong {
+  font-size: 13px;
+  color: #172344;
+}
+
+.business-modal-status span {
+  font-size: 13px;
+  font-weight: 900;
+  color: #2850d8;
+}
+
+.business-modal-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  border: 0;
+  border-radius: 999px;
+  background: #172344;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.business-modal-button:hover {
+  background: #2850d8;
+}
+
+.business-modal-button.disabled {
+  background: #9aa5c4;
+}

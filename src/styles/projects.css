@@ -339,3 +339,30 @@
     gap: 14px;
   }
 }
+.project-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #172344;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.project-action:hover {
+  background: #2850d8;
+  transform: translateY(-2px);
+}
+
+.project-action span {
+  font-size: 17px;
+}
