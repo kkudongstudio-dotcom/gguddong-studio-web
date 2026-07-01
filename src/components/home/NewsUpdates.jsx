@@ -1,78 +1,74 @@
 function NewsUpdates() {
   const updates = [
     {
-      date: "2026.06.30",
-      title: "GGUDDONG.STUDIO 공식 홈페이지 구축",
-      category: "Homepage",
+      type: "DEPLOY",
+      title: "GGUDDONG.STUDIO 공식 홈페이지 V1 오픈",
+      date: "2026.07",
+      status: "완료",
       description:
-        "React 기반 공식 홈페이지 구축을 진행 중입니다.",
+        "React + Vite 기반 공식 홈페이지를 구축하고 Cloudflare Pages 배포 및 도메인 연결을 완료했습니다.",
     },
     {
-      date: "2026.06.29",
-      title: "Current Projects 섹션 추가",
-      category: "Development",
+      type: "WEBSITE",
+      title: "AI Team 섹션 리뉴얼",
+      date: "2026.07",
+      status: "적용",
       description:
-        "프로젝트 운영 현황과 진행률을 확인할 수 있는 섹션을 구축했습니다.",
+        "AI 직원을 단순 카드가 아닌 실제 운영팀처럼 보이도록 구성했습니다.",
     },
     {
-      date: "2026.06.28",
-      title: "AI Team 섹션 설계",
-      category: "AI",
+      type: "LOTTO",
+      title: "LOTTO WORKSHOP 운영 시스템 고도화",
+      date: "진행중",
+      status: "운영",
       description:
-        "GGUDDONG.STUDIO의 AI 운영 구조와 역할을 정리했습니다.",
+        "AI 로또 분석공방의 추천 엔진, 브리핑, 결과 검토 흐름을 개선하고 있습니다.",
     },
     {
-      date: "Coming Soon",
-      title: "ERP 실시간 연동",
-      category: "Future",
+      type: "ERP",
+      title: "GGUDDONG ERP 관리자 포털 준비",
+      date: "개발중",
+      status: "구축",
       description:
-        "향후 ERP와 연결하여 홈페이지에 실시간 운영 현황을 표시할 예정입니다.",
+        "공식 홈페이지와 내부 ERP, 사업부 운영 시스템을 연결하기 위한 구조를 준비 중입니다.",
     },
   ];
 
   return (
     <section id="news" className="section news-section">
       <div className="container">
-
         <div className="section-heading">
-          <span className="section-label">News & Updates</span>
+          <span className="section-label">Studio Activity</span>
 
-          <h2>최근 업데이트</h2>
+          <h2>GGUDDONG.STUDIO 운영 로그</h2>
 
           <p>
-            GGUDDONG.STUDIO의 프로젝트 진행 상황과
-            주요 업데이트를 기록합니다.
+            공식 홈페이지, 서비스, ERP, 사업부 프로젝트의 진행 상황을
+            스튜디오 활동 기록으로 정리합니다.
           </p>
         </div>
 
-        <div className="news-list">
-
+        <div className="activity-timeline">
           {updates.map((item) => (
-
-            <article className="news-card" key={item.title}>
-
-              <div className="news-date">
-                {item.date}
+            <article className="activity-card" key={item.title}>
+              <div className="activity-left">
+                <span className={`activity-badge activity-${item.type.toLowerCase()}`}>
+                  {item.type}
+                </span>
+                <strong>{item.date}</strong>
               </div>
 
-              <div className="news-content">
-
-                <span className="news-category">
-                  {item.category}
-                </span>
-
-                <h3>{item.title}</h3>
+              <div className="activity-content">
+                <div className="activity-title-row">
+                  <h3>{item.title}</h3>
+                  <span>{item.status}</span>
+                </div>
 
                 <p>{item.description}</p>
-
               </div>
-
             </article>
-
           ))}
-
         </div>
-
       </div>
     </section>
   );
