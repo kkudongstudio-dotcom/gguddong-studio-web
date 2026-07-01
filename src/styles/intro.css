@@ -1,0 +1,195 @@
+/* =========================
+   Intro Gateway
+========================= */
+
+.intro-page {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  background: linear-gradient(180deg, #f8faff 0%, #eef4ff 100%);
+
+  z-index: 9999;
+}
+
+.intro-card {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 56px 44px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid #e8ecf2;
+  border-radius: 30px;
+
+  box-shadow: 0 24px 60px rgba(16, 24, 40, 0.08);
+
+  text-align: center;
+
+  animation: introFade 0.6s ease;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.intro-logo-image {
+  display: block;
+
+  width: 180px;
+
+  margin: 0 auto 28px;
+
+  transition: transform 0.3s ease;
+}
+
+.intro-logo-image:hover {
+  transform: scale(1.04);
+}
+
+/* =========================
+   Typography
+========================= */
+
+.intro-card h1 {
+  margin: 0;
+
+  font-size: 2.2rem;
+
+  font-weight: 900;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.05em;
+
+  color: #101828;
+}
+
+.intro-subtitle {
+  margin-top: 16px;
+
+  color: #667085;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+/* =========================
+   Button
+========================= */
+
+.intro-enter-btn {
+  width: 100%;
+
+  height: 58px;
+
+  margin-top: 40px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #5b4bff;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.intro-enter-btn:hover {
+  background: #4338ca;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 18px 36px rgba(91, 75, 255, 0.2);
+}
+
+/* =========================
+   Checkbox
+========================= */
+
+.intro-checkbox {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 22px;
+
+  font-size: 0.88rem;
+
+  color: #667085;
+
+  cursor: pointer;
+}
+
+.intro-checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================
+   Animation
+========================= */
+
+@keyframes introFade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .intro-card {
+    max-width: 360px;
+
+    padding: 40px 28px;
+  }
+
+  .intro-logo-image {
+    width: 145px;
+  }
+
+  .intro-card h1 {
+    font-size: 1.85rem;
+  }
+
+  .intro-subtitle {
+    font-size: 0.76rem;
+  }
+
+  .intro-enter-btn {
+    height: 54px;
+  }
+
+  .intro-checkbox {
+    font-size: 0.82rem;
+  }
+}

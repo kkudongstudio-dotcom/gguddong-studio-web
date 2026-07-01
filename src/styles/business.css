@@ -1,0 +1,294 @@
+/* =========================
+   Business Divisions
+========================= */
+
+.divisions-section {
+  padding: 120px 0;
+  background: #ffffff;
+}
+
+/* =========================
+   Section Heading
+========================= */
+
+.divisions-section .section-heading {
+  max-width: 900px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.divisions-section .section-heading span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: #eef4ff;
+  color: #5b4bff;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  margin-bottom: 24px;
+}
+
+.divisions-section .section-heading h2 {
+  margin: 0;
+
+  font-size: 3.3rem;
+  font-weight: 900;
+
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+
+  color: #101828;
+}
+
+.divisions-section .section-heading p {
+  max-width: 760px;
+
+  margin: 30px auto 0;
+
+  font-size: 1.15rem;
+
+  line-height: 1.9;
+
+  color: #667085;
+}
+
+/* =========================
+   Grid
+========================= */
+
+.division-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+/* =========================
+   Card
+========================= */
+
+.division-card {
+  min-height: 390px;
+
+  padding: 28px;
+
+  border-radius: 26px;
+
+  border: 1px solid #e8ecf2;
+
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.05);
+}
+
+.division-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 24px 48px rgba(16, 24, 40, 0.1);
+}
+
+/* =========================
+   Top
+========================= */
+
+.division-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 28px;
+}
+
+.division-label {
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.division-dot {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 999px;
+
+  background: currentColor;
+}
+
+/* =========================
+   Text
+========================= */
+
+.division-card strong {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: currentColor;
+
+  font-size: 0.78rem;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+.division-card h3 {
+  margin: 0 0 16px;
+
+  font-size: 1.65rem;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.03em;
+
+  color: #101828;
+}
+
+.division-card p {
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 0.95rem;
+
+  line-height: 1.75;
+}
+
+/* =========================
+   Items
+========================= */
+
+.division-items {
+  list-style: none;
+
+  padding: 0;
+  margin: 24px 0 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.division-items li {
+  padding: 8px 11px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  color: #475467;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* =========================
+   Button
+========================= */
+
+.division-btn {
+  width: 100%;
+
+  height: 46px;
+
+  margin-top: auto;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #101828;
+  color: #ffffff;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.division-btn:hover {
+  background: #5b4bff;
+
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Colors
+========================= */
+
+.division-card.purple {
+  color: #7c3aed;
+
+  background: linear-gradient(180deg, #ffffff 0%, #faf5ff 100%);
+}
+
+.division-card.orange {
+  color: #f97316;
+
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+}
+
+.division-card.mint {
+  color: #14b8a6;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%);
+}
+
+.division-card.green {
+  color: #22c55e;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1100px) {
+  .division-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .divisions-section {
+    padding: 90px 0;
+  }
+
+  .divisions-section .section-heading h2 {
+    font-size: 2.3rem;
+  }
+
+  .divisions-section .section-heading p {
+    font-size: 1rem;
+  }
+
+  .division-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .division-card {
+    min-height: auto;
+    padding: 26px;
+  }
+}

@@ -1,0 +1,29 @@
+.container {
+    width: min(1040px, 90%);
+    margin: 0 auto;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-muted {
+  background: #EEF2FF;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
