@@ -365,3 +365,27 @@
     transform:translateY(-2px);
 
 }
+.login-portal-list {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0 24px;
+}
+
+.login-portal-list div {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(244, 247, 255, 0.9);
+  border: 1px solid rgba(40, 70, 140, 0.08);
+}
+
+.login-portal-list strong {
+  font-size: 13px;
+  color: #172344;
+}
+
+.login-portal-list span {
+  font-size: 12px;
+  color: #6b7390;
+}

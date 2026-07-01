@@ -48,35 +48,49 @@ function Header() {
       {showLoginNotice && (
         <div className="login-notice">
           <div className="login-notice-card">
-
             <button
               type="button"
               className="login-notice-close"
               onClick={() => setShowLoginNotice(false)}
+              aria-label="Close login notice"
             >
               ×
             </button>
 
             <div className="login-notice-header">
-
               <img
                 src={circleLogo}
                 alt="GGUDDONG.STUDIO"
                 className="login-notice-logo"
               />
 
-              <span>ERP PORTAL</span>
-
+              <span>GGUDDONG ERP PORTAL</span>
             </div>
 
-            <h3>ERP 관리자 포털</h3>
+            <h3>관리자 포털 준비 중</h3>
 
             <p>
-              GGUDDONG.STUDIO ERP와 연결되는
-              관리자 전용 시스템입니다.
-              <br />
-              현재 개발이 진행 중입니다.
+              이 영역은 GGUDDONG.STUDIO의 내부 ERP와
+              각 사업부 운영 시스템을 연결하기 위한
+              관리자 전용 입구입니다.
             </p>
+
+            <div className="login-portal-list">
+              <div>
+                <strong>ERP</strong>
+                <span>본사 관리자 시스템</span>
+              </div>
+
+              <div>
+                <strong>LOTTO WORKSHOP V2</strong>
+                <span>AI 로또 분석공방 운영 시스템</span>
+              </div>
+
+              <div>
+                <strong>DIVISION CONTROL</strong>
+                <span>사업부별 운영 대시보드</span>
+              </div>
+            </div>
 
             <button
               className="login-notice-confirm"
@@ -84,7 +98,6 @@ function Header() {
             >
               확인
             </button>
-
           </div>
         </div>
       )}
