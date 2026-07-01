@@ -2,50 +2,51 @@ import footerLogo from "../../assets/logo/footer_logo.png";
 
 function Footer() {
   return (
-    <footer id="contact" className="site-footer">
+    <footer id="contact" className="site-footer footer-v3">
       <div className="container footer-inner">
-        <div className="footer-brand">
-          <img src={footerLogo} alt="GGUDDONG.STUDIO" />
+        <div className="footer-brand-end">
+          <img
+            src={footerLogo}
+            alt="GGUDDONG.STUDIO"
+            className="footer-main-logo"
+          />
 
-          <div>
-            <h2>GGUDDONG.STUDIO</h2>
-            <p>AI PROJECT STUDIO</p>
-          </div>
+          <p className="footer-slogan">
+            AI와 함께 아이디어를 현실로 만듭니다.
+          </p>
         </div>
 
-        <div className="footer-grid">
-          <div className="footer-column">
-            <h3>Studio</h3>
-            <p>
-              GGUDDONG.STUDIO는 AI를 활용해 아이디어를 실제 서비스와
-              운영 시스템으로 발전시키는 프로젝트 스튜디오입니다.
-            </p>
-          </div>
+        <div className="footer-business-row">
+          <span>LOTTO WORKSHOP</span>
+          <span>LOGISTICS</span>
+          <span>GAME STUDIO</span>
+          <span>COMMERCE</span>
+        </div>
 
-          <div className="footer-column">
-            <h3>Business</h3>
-            <ul>
-              <li>AI 로또 분석공방</li>
-              <li>LOTTO WORKSHOP</li>
-              <li>Logistics Division</li>
-              <li>Game Studio</li>
-              <li>Commerce Division</li>
-            </ul>
-          </div>
+        <div className="footer-status-row">
+          <span>
+            <i className="status-dot online" />
+            Website
+          </span>
 
-          <div className="footer-column">
-            <h3>Contact</h3>
-            <ul>
-              <li>Official Website</li>
-              <li>gguddong.studio</li>
-              <li>공식 문의 채널 준비 중</li>
-            </ul>
-          </div>
+          <span>
+            <i className="status-dot building" />
+            ERP
+          </span>
+
+          <span>
+            <i className="status-dot online" />
+            LOTTO
+          </span>
+        </div>
+
+        <div className="footer-version">
+          Website Version V1.2
         </div>
 
         <div className="footer-bottom">
           <span>© 2026 GGUDDONG.STUDIO. All rights reserved.</span>
-          <span>Built with React + Vite</span>
+          <span>Powered by AI Project Studio</span>
         </div>
       </div>
     </footer>

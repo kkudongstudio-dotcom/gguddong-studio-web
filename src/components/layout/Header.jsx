@@ -5,13 +5,13 @@ function Header() {
   const [showLoginNotice, setShowLoginNotice] = useState(false);
 
   const navItems = [
-    { label: "HOME", href: "#home" },
-    { label: "ABOUT", href: "#about" },
-    { label: "PROJECTS", href: "#projects" },
-    { label: "BUSINESS", href: "#business" },
-    { label: "AI TEAM", href: "#ai-team" },
-    { label: "NEWS", href: "#news" },
-    { label: "CONTACT", href: "#contact" },
+    { label: "HOME", href: "/#home" },
+    { label: "ABOUT", href: "/#about" },
+    { label: "PROJECTS", href: "/#projects" },
+    { label: "BUSINESS", href: "/#business" },
+    { label: "AI TEAM", href: "/#ai-team" },
+    { label: "NEWS", href: "/#news" },
+    { label: "CONTACT", href: "/#contact" },
   ];
 
   return (
@@ -19,7 +19,7 @@ function Header() {
       <header className="site-header">
         <div className="container header-inner">
           <div className="header-left">
-            <a href="#home" className="header-logo">
+            <a href="/#home" className="header-logo">
               <img src={circleLogo} alt="GGUDDONG.STUDIO logo" />
               <span>GGUDDONG.STUDIO</span>
             </a>
@@ -71,8 +71,7 @@ function Header() {
 
             <p>
               이 영역은 GGUDDONG.STUDIO의 내부 ERP와
-              각 사업부 운영 시스템을 연결하기 위한
-              관리자 전용 입구입니다.
+              각 사업부 운영 시스템을 연결하기 위한 관리자 전용 입구입니다.
             </p>
 
             <div className="login-portal-list">
