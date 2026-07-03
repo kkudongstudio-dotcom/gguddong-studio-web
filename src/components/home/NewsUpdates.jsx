@@ -48,6 +48,17 @@ function NewsUpdates() {
       ready: true,
       buttonText: "서비스 보기",
     },
+    {
+  type: "ERP",
+  title: "ERP 관리자 포털 구축 준비",
+  date: "예정",
+  status: "준비중",
+  description:
+    "GGUDDONG.STUDIO 공식 홈페이지와 연동되는 ERP 관리자 포털 구축을 준비하고 있습니다. ERP 완성 후 로그인 기능과 함께 정식 오픈될 예정입니다.",
+  href: null,
+  ready: false,
+  buttonText: "준비중",
+},
   ];
 
   return (
@@ -138,11 +149,13 @@ function NewsUpdates() {
             >
               확인
             </button>
+            
           </div>
         </div>
       )}
     </section>
   );
 }
+
 
 export default NewsUpdates;
