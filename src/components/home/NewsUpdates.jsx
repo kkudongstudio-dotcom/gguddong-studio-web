@@ -5,23 +5,34 @@ function NewsUpdates() {
 
   const updates = [
     {
+      type: "ERP",
+      title: "GGUDDONG ERP V2 제작 50% 진행",
+      date: "2026.07",
+      status: "개발중",
+      description:
+        "GGUDDONG ERP V2 React Edition을 중심으로 내부 운영 시스템과 관리자 포털 리모델링을 진행하고 있습니다.",
+      href: null,
+      ready: false,
+      buttonText: "준비중",
+    },
+    {
+      type: "CONTENT",
+      title: "콘텐츠 센터 제작 착수",
+      date: "2026.07",
+      status: "착수",
+      description:
+        "GGUDDONG.STUDIO의 콘텐츠 제작, 운영 기록, 업데이트 관리를 위한 Content Center 구축을 시작했습니다.",
+      href: null,
+      ready: false,
+      buttonText: "준비중",
+    },
+    {
       type: "DEPLOY",
       title: "GGUDDONG.STUDIO 공식 홈페이지 V1 오픈",
       date: "2026.07",
       status: "완료",
       description:
-        "React + Vite 기반 공식 홈페이지를 구축하고 Cloudflare Pages 배포 및 도메인 연결을 완료했습니다.",
-      href: "https://gguddong.studio",
-      ready: true,
-      buttonText: "홈페이지 보기",
-    },
-    {
-      type: "WEBSITE",
-      title: "AI Team 섹션 리뉴얼",
-      date: "2026.07",
-      status: "적용",
-      description:
-        "AI 직원을 단순 카드가 아닌 실제 운영팀처럼 보이도록 구성했습니다.",
+        "React + Vite 기반 공식 홈페이지를 구축하고 Cloudflare Pages 배포 및 gguddong.studio 도메인 연결을 완료했습니다.",
       href: "https://gguddong.studio",
       ready: true,
       buttonText: "홈페이지 보기",
@@ -37,17 +48,6 @@ function NewsUpdates() {
       ready: true,
       buttonText: "서비스 보기",
     },
-    {
-      type: "ERP",
-      title: "GGUDDONG ERP 관리자 포털 준비",
-      date: "개발중",
-      status: "구축",
-      description:
-        "공식 홈페이지와 내부 ERP, 사업부 운영 시스템을 연결하기 위한 구조를 준비 중입니다.",
-      href: null,
-      ready: false,
-      buttonText: "준비중",
-    },
   ];
 
   return (
@@ -59,7 +59,7 @@ function NewsUpdates() {
           <h2>GGUDDONG.STUDIO 운영 로그</h2>
 
           <p>
-            공식 홈페이지, 서비스, ERP, 사업부 프로젝트의 진행 상황을
+            공식 홈페이지, 서비스, ERP, 콘텐츠 센터의 진행 상황을
             스튜디오 활동 기록으로 정리합니다.
           </p>
         </div>
@@ -73,6 +73,7 @@ function NewsUpdates() {
                 >
                   {item.type}
                 </span>
+
                 <strong>{item.date}</strong>
               </div>
 
