@@ -5,12 +5,45 @@ function NewsUpdates() {
 
   const updates = [
     {
-      type: "ERP",
-      title: "GGUDDONG ERP V2 제작 50% 진행",
+      type: "LOTTO",
+      title: "LOTTO ENGINE V3 Stage2 Judge 시스템 구축",
       date: "2026.07",
       status: "개발중",
       description:
-        "GGUDDONG ERP V2 React Edition을 중심으로 내부 운영 시스템과 관리자 포털 리모델링을 진행하고 있습니다.",
+        "기존 압축 방식에서 벗어나 Review Judge와 Final Judge를 중심으로 AI 심사 구조를 구축했습니다. Generator → Review Judge → Final Judge 구조로 요일별 역할을 분리하여 독립적인 판단 시스템으로 개선했습니다.",
+      href: null,
+      ready: false,
+      buttonText: "준비중",
+    },
+    {
+      type: "AI",
+      title: "Judge Result Standard 적용 완료",
+      date: "2026.07",
+      status: "완료",
+      description:
+        "모든 Judge가 동일한 결과 형식을 사용하도록 PASS / WARN / FAIL, Score, Confidence, Reason, Evidence 표준 구조를 적용했습니다.",
+      href: null,
+      ready: false,
+      buttonText: "준비중",
+    },
+    {
+      type: "ENGINE",
+      title: "Stage2 운영 검증 시작",
+      date: "2026.07",
+      status: "진행중",
+      description:
+        "20개 후보를 대상으로 Review Judge 자동 심사를 수행하고 있으며, 기존 압축 방식과 비교하여 Stage2 운영 검증을 진행하고 있습니다.",
+      href: null,
+      ready: false,
+      buttonText: "준비중",
+    },
+    {
+      type: "ERP",
+      title: "GGUDDONG AI OS 구축 진행",
+      date: "2026.07",
+      status: "개발중",
+      description:
+        "React 기반 AI 운영체제(OS)를 구축 중입니다. 대표 작업실, AI 본사, 사업부 관제센터를 하나의 운영 플랫폼으로 통합하고 있습니다.",
       href: null,
       ready: false,
       buttonText: "준비중",
@@ -43,22 +76,11 @@ function NewsUpdates() {
       date: "진행중",
       status: "운영",
       description:
-        "AI 로또 분석공방의 추천 엔진, 브리핑, 결과 검토 흐름을 개선하고 있습니다.",
+        "AI 로또 분석공방의 추천 엔진, 브리핑, 결과 검토 흐름을 지속적으로 개선하고 있습니다.",
       href: "https://ai-lottogongbang.kr",
       ready: true,
       buttonText: "서비스 보기",
     },
-    {
-  type: "ERP",
-  title: "ERP 관리자 포털 구축 준비",
-  date: "예정",
-  status: "준비중",
-  description:
-    "GGUDDONG.STUDIO 공식 홈페이지와 연동되는 ERP 관리자 포털 구축을 준비하고 있습니다. ERP 완성 후 로그인 기능과 함께 정식 오픈될 예정입니다.",
-  href: null,
-  ready: false,
-  buttonText: "준비중",
-},
   ];
 
   return (
@@ -70,8 +92,8 @@ function NewsUpdates() {
           <h2>GGUDDONG.STUDIO 운영 로그</h2>
 
           <p>
-            공식 홈페이지, 서비스, ERP, 콘텐츠 센터의 진행 상황을
-            스튜디오 활동 기록으로 정리합니다.
+            공식 홈페이지, 서비스, AI OS, LOTTO ENGINE, 콘텐츠 센터의 진행
+            상황을 스튜디오 활동 기록으로 정리합니다.
           </p>
         </div>
 
@@ -149,13 +171,11 @@ function NewsUpdates() {
             >
               확인
             </button>
-            
           </div>
         </div>
       )}
     </section>
   );
 }
-
 
 export default NewsUpdates;
