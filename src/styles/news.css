@@ -140,3 +140,30 @@
   background: #2850d8;
   transform: translateY(-2px);
 }
+.activity-status-완료{
+    background:#18b566;
+}
+
+.activity-status-개발중{
+    background:#ff9800;
+}
+
+.activity-status-진행중{
+    background:#1976d2;
+}
+
+.activity-status-운영{
+    background:#7b5cff;
+}
+
+.activity-status-착수{
+    background:#00a6a6;
+}
+
+.activity-status-테스트{
+    background:#666;
+}
+
+.activity-status-준비중{
+    background:#999;
+}
