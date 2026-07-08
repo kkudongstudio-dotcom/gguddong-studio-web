@@ -5,6 +5,17 @@ function NewsUpdates() {
 
   const updates = [
     {
+  type: "LOTTO",
+  title: "Stage2 Judge System 1차 리팩토링 완료",
+  date: "2026.07",
+  status: "완료",
+  description:
+    "GGUDDONG LOTTO ENGINE V3 Stage2 Judge System의 1차 리팩토링을 완료했습니다. Review Judge, Final Judge, Judge Result Standard, Common Rule Engine, Selector, Reason Builder, Reader, Sheet Manager, Controller 구조를 분리하고 통합 테스트 runEvolutionFinalStageAllV31 실행을 정상 확인했습니다.",
+  href: null,
+  ready: false,
+  buttonText: "준비중",
+},
+    {
       type: "LOTTO",
       title: "LOTTO ENGINE V3 Stage2 Judge 시스템 구축",
       date: "2026.07",
