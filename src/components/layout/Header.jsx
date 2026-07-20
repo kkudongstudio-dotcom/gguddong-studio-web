@@ -1,5 +1,6 @@
 import { useState } from "react";
 import circleLogo from "../../assets/logo/circle_logo.png";
+import { LINKS } from "../../config/links";
 
 function Header() {
   const [showLoginNotice, setShowLoginNotice] = useState(false);
@@ -13,6 +14,10 @@ function Header() {
     { label: "NEWS", href: "/#news" },
     { label: "CONTACT", href: "/#contact" },
   ];
+
+  const handleAiOsEnter = () => {
+    window.location.href = LINKS.AI_OS;
+  };
 
   return (
     <>
@@ -52,7 +57,7 @@ function Header() {
               type="button"
               className="login-notice-close"
               onClick={() => setShowLoginNotice(false)}
-              aria-label="Close login notice"
+              aria-label="Close internal portal"
             >
               ×
             </button>
@@ -64,38 +69,39 @@ function Header() {
                 className="login-notice-logo"
               />
 
-              <span>GGUDDONG ERP PORTAL</span>
+              <span>GGUDDONG INTERNAL PORTAL</span>
             </div>
 
-            <h3>관리자 포털 준비 중</h3>
+            <h3>내부 시스템</h3>
 
             <p>
-              이 영역은 GGUDDONG.STUDIO의 내부 ERP와
-              각 사업부 운영 시스템을 연결하기 위한 관리자 전용 입구입니다.
+              GGUDDONG.STUDIO 내부 운영 시스템으로 이동합니다.
+              허가된 계정만 AI OS에 접근할 수 있습니다.
             </p>
 
             <div className="login-portal-list">
               <div>
-                <strong>ERP</strong>
-                <span>본사 관리자 시스템</span>
+                <strong>GGUDDONG AI OS</strong>
+                <span>본사 AI 운영 및 관제 시스템</span>
               </div>
 
               <div>
-                <strong>LOTTO WORKSHOP V2</strong>
-                <span>AI 로또 분석공방 운영 시스템</span>
+                <strong>ACCESS CONTROL</strong>
+                <span>승인된 내부 계정만 접근 가능</span>
               </div>
 
               <div>
-                <strong>DIVISION CONTROL</strong>
-                <span>사업부별 운영 대시보드</span>
+                <strong>SECURE LOGIN</strong>
+                <span>Cloudflare Access 인증 적용</span>
               </div>
             </div>
 
             <button
+              type="button"
               className="login-notice-confirm"
-              onClick={() => setShowLoginNotice(false)}
+              onClick={handleAiOsEnter}
             >
-              확인
+              AI OS 진입
             </button>
           </div>
         </div>
