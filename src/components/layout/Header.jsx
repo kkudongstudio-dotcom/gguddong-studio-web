@@ -16,8 +16,12 @@ function Header() {
   ];
 
   const handleAiOsEnter = () => {
-    window.location.href = LINKS.AI_OS;
-  };
+  window.open(
+    LINKS.AI_OS,
+    "_blank",
+    "noopener,noreferrer"
+  );
+};
 
   return (
     <>
